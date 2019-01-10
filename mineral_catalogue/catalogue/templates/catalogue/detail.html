@@ -1,0 +1,89 @@
+{% extends "catalogue/base.html" %}
+{% load static %}
+
+{% block content %}
+<article class="media content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <h1 class="mineral__name">{{ mineral.name|title }}</h1>
+                <img src="{% static 'catalogue/images/' %}{{ mineral.name }}.jpg"/>
+                <p class="mineral__caption">{{ mineral.image_caption }}</p>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs8">
+            <br>
+                <table class="table">
+                    <tr>
+                        <td class="mineral__category">Category</td>
+                        <td>{{ mineral.category }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Formula</td>
+                        <td class="mineral__formula">{{ mineral.formula|safe }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Group</td>
+                        <td>{{ mineral.group }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Strunz Classification</td>
+                        <td>{{ mineral.strunz_classification }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Crystal System</td>
+                        <td>{{ mineral.crystal_system }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Unit Cell</td>
+                        <td>{{ mineral.unit_cell }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Color</td>
+                        <td>{{ mineral.color }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Crystal Symmetry</td>
+                        <td>{{ mineral.crystal_symmetry }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Cleavage</td>
+                        <td>{{ mineral.cleavage }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Mohs Scale Hardness</td>
+                        <td>{{ mineral.mohs_scale_hardness }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Luster</td>
+                        <td>{{ mineral.luster }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Streak</td>
+                        <td>{{ mineral.streak }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Diaphaneity</td>
+                        <td>{{ mineral.diaphaneity }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Optical Properties</td>
+                        <td>{{ mineral.optical_properties }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Refractive Index</td>
+                        <td>{{ mineral.refractive_index }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Crystal Habit</td>
+                        <td>{{ mineral.crystal_habit }}</td>
+                    </tr>
+                    <tr>
+                        <td class="mineral__category">Specific Gravity</td>
+                        <td>{{ mineral.specific_gravity }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock content %}

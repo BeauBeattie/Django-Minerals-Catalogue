@@ -1,0 +1,15 @@
+{% extends "catalogue/base.html" %}
+
+{% block content %}
+    <div class="mineral__container">
+        <div class="row">
+        {% for mineral in minerals %}
+            {% if forloop.counter0|divisibleby:3 %}
+                </div><br><div class="row">
+            {% endif %}
+            <div class="col-4">
+                <a class="minerals__anchor" href="{% url 'catalogue:detail' pk=mineral.pk %}">{{ mineral.name|title }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
